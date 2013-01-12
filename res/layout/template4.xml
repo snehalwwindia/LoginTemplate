@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg5" >
+    
+    <!-- Layout Texts  -->
+    <LinearLayout 
+       android:id="@+id/layout_texts"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="@dimen/margin_medium"
+       >
+       
+        <TextView 
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+        android:text="@string/user_name"
+        android:textColor="@color/white"  
+        />
+        
+        <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:padding="@dimen/padding_medium"
+       />
+        
+        <View 
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/separator_ht"
+        />
+        
+        <TextView 
+       	android:layout_width="wrap_content"
+       	android:layout_height="wrap_content"
+        android:text="@string/password"    
+        android:textColor="@color/white"  
+        />
+        
+         <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+         
+        <View 
+        android:layout_width="fill_parent"
+    	android:layout_height="@dimen/separator_ht"
+        />
+           
+         <CheckBox 
+        android:id="@+id/chkRemmbrPass"
+        android:button="@drawable/checkbox_selector"
+        android:textColor="@color/white"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/rembr_pass"
+        android:textSize="12dip"
+        />
+        
+ 	</LinearLayout>
+ 	<!-- End Layout Texts  -->
+ 
+ 	<!-- Layout Buttons  -->
+  	<LinearLayout 
+       android:id="@+id/layout_login_checkboxes"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:gravity="right"
+       android:layout_below="@+id/layout_texts"
+       android:weightSum="1"
+       >
+         
+  	   <Button 
+       android:id="@+id/btnLogin"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/login" 
+       android:layout_weight="0.2"
+       android:background="@drawable/login_selector"
+       />
+     
+       <Button 
+       android:id="@+id/btnRegister"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="@string/register" 
+       android:layout_weight="0.3"
+       android:background="@drawable/login_selector"
+       />
+         
+  	</LinearLayout>
+	 <!-- End Layout Buttons  -->
+	 
+	 <!--  <LinearLayout 
+       android:id="@+id/layout_header"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:gravity="right"
+       android:layout_margin="@dimen/margin_medium"
+       >
+	  <ImageView 
+  	   android:src="@drawable/user"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+        /> 
+	</LinearLayout> -->
+	
+</RelativeLayout>

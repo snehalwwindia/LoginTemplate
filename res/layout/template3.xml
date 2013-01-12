@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1" >
+    
+    <!-- Header Layout  -->
+     <ImageView 
+       android:id="@+id/imgLogo"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:src="@drawable/user_group"
+       android:layout_alignParentTop="true"
+       android:layout_margin="@dimen/margin_medium"
+       /> 
+    <!-- End Header Layout  -->
+    
+    <!-- Middle Layout  -->
+     <LinearLayout 
+       android:id="@+id/layout_middle"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="@dimen/margin_large"
+       android:layout_below="@+id/imgLogo"
+       >
+       
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+       />
+    
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+    
+     <Button 
+       android:id="@+id/btnLogin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/margin_large"
+       android:text="@string/login" 
+       android:background="@drawable/login_selector"
+       />
+     
+      </LinearLayout>
+     <!-- End Middle Layout  --> 
+     
+     
+     <!-- Footer Layout  -->
+     <LinearLayout 
+       android:id="@+id/layout_footer"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:layout_margin="@dimen/margin_large"
+       android:layout_alignParentBottom="true"
+       >
+     
+       <TextView 
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_text"
+        android:textColor="@color/black"
+        /> 
+        
+       <Button 
+       android:id="@+id/btnRegister"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:text="@string/signup" 
+       android:textColor="@color/white"
+       android:background="@drawable/button_blue_selector"
+       />
+       
+      </LinearLayout>
+   	<!-- End Footer Layout  -->
+
+</RelativeLayout>

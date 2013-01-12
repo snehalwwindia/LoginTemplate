@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical" 
+    android:background="@drawable/bg5">
+
+    
+    <!-- Layout of Input Texts  -->
+    <LinearLayout 
+       android:id="@+id/layout_login_texts"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_below="@+id/imgLogo"
+       android:orientation="vertical"
+       android:layout_margin="@dimen/margin_medium"
+       >
+       
+        <ImageView 
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/user_group"
+       android:layout_margin="@dimen/margin_medium"
+       android:id="@+id/imgLogo"
+       android:layout_gravity="left"
+        />
+        
+        
+    <EditText
+        android:id="@+id/txtUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:padding="@dimen/padding_medium"
+       />
+    
+    <EditText
+        android:id="@+id/txtPass"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/padding_medium"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+    </LinearLayout>
+    <!-- End Layout of Input Texts  -->
+    
+    <!-- Layout of Horizontal aligned Login Buttons  -->
+    <LinearLayout 
+       android:id="@+id/layout_login_buttons"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:orientation="horizontal"
+       android:layout_below="@+id/layout_login_texts"
+       android:gravity="center_horizontal"
+       android:weightSum="1"
+       android:layout_margin="@dimen/margin_medium"
+        >
+    
+        <CheckBox 
+        android:id="@+id/chkRemmbrPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.3"
+        android:text="@string/rembr_pass"
+        android:button="@drawable/checkbox_selector"
+        android:textColor="@color/black"
+        android:textSize="12dip"
+        />
+        
+     <Button 
+       android:id="@+id/btnLogin"
+       android:layout_width="0dip"
+       android:layout_height="wrap_content"
+       android:text="@string/login" 
+       android:layout_weight="0.7"
+       android:background="@drawable/login_selector"
+       />
+     
+    </LinearLayout>
+    <!-- End Layout of Horizontal aligned Login Buttons  -->
+    
+    <!-- <TextView 
+	    android:id="@+id/txtForgotPass"
+        android:gravity="right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_login_buttons"
+        android:layout_marginLeft="18dip"
+        android:text="@string/forgot_pass"
+        android:textColor="@color/blue"
+        android:autoLink="none"
+        /> -->
+	
+	
+	  <Button 
+       android:id="@+id/btnRegister"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:text="@string/register" 
+       android:background="@drawable/login_selector"
+       /> 
+	
+</RelativeLayout>

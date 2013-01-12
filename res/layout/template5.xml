@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg1"
+  	>
+
+     <LinearLayout 
+       android:id="@+id/layout_header"
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_alignParentBottom="true"
+       android:weightSum="1"
+       android:orientation="vertical"
+       android:gravity="right"
+       android:layout_margin="@dimen/margin_large"
+       >
+    
+     <!-- <TextView 
+       android:text="@string/app_name"
+       android:textColor="@color/black"
+       android:textSize="@dimen/txt_title"
+       android:textStyle="bold"
+       android:layout_marginLeft="@dimen/margin_small"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.7"
+       android:gravity="left"
+       /> -->
+         
+  	 <ImageView 
+  	   android:src="@drawable/user_group"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.3"
+        /> 
+        
+       <!--  <CheckBox 
+        android:id="@+id/chkForgotPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:text="@string/forgot_pass"
+        android:textSize="12dip"
+        />  -->
+        
+        <CheckBox 
+        android:id="@+id/chkRemmbrPass"
+        android:button="@drawable/checkbox_selector"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:text="@string/rembr_pass"
+        android:textSize="12dip"
+        /> 
+    </LinearLayout> 
+    
+    <!-- Layout of Input Texts  -->
+    <LinearLayout 
+       android:id="@+id/layout_login_texts"
+       android:orientation="vertical"
+       
+       android:layout_width="fill_parent"
+       android:layout_height="wrap_content"
+       android:layout_margin="@dimen/margin_large"
+       android:padding="@dimen/padding_medium"
+       >
+  	 
+     <TextView 
+        android:text="@string/login_text"
+        android:textSize="@dimen/txt_subtitle"
+        android:textColor="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+         />
+     
+     <View 
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="@dimen/margin_medium"
+        />
+        
+    <EditText
+        android:id="@+id/txtUserName"
+        android:textColor="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:hint="@string/user_name"
+        android:inputType="textPersonName"
+        android:padding="@dimen/padding_medium"
+       />
+    
+    <EditText
+        android:id="@+id/txtPass"
+        android:textColor="@color/bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:padding="@dimen/padding_medium"
+        android:hint="@string/password"
+        android:inputType="textPassword"/>
+   
+    <!-- Layout of Horizontal aligned Login Buttons  -->
+    <LinearLayout 
+       android:id="@+id/layout_login_buttons"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="@dimen/margin_large"
+       android:orientation="horizontal"
+       android:weightSum="1"
+        >
+    
+     <Button 
+       android:id="@+id/btnLogin"
+       android:text="@string/login" 
+       android:background="@drawable/login_selector"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.5"
+       />
+     
+     
+	  <Button 
+       android:id="@+id/btnRegister"
+       android:text="@string/register" 
+       android:background="@drawable/login_selector"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_weight="0.5"
+       /> 
+     
+    </LinearLayout>
+    <!-- End Layout of Horizontal aligned Login Buttons  -->
+    </LinearLayout>
+    <!-- End Layout of Input Texts  -->
+    
+</RelativeLayout>
